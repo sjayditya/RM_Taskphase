@@ -1,0 +1,22 @@
+int ir=A0;
+int led=LED_BUILTIN;
+void setup() {
+pinMode(ir, INPUT);
+pinMode(led, OUTPUT);  
+
+}
+
+void loop() {
+  int status=0;
+  status = analogRead(ir);
+
+  if(status>500)
+  {
+    digitalWrite(led,HIGH);
+  }
+  else 
+  {
+    digitalWrite(led,LOW);
+  }
+  
+}
